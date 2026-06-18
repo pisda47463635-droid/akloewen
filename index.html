@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AK Loewen | Kampfsportstudio Solingen</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+        :root {
+            --black: #0a0a0a;
+            --white: #f8f8f8;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: var(--black) url('./logo.jpeg') center/contain fixed no-repeat;
+            color: var(--white);
+            line-height: 1.6;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(10, 10, 10, 0.90);
+            z-index: -1;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(10,10,10,0.97);
+            z-index: 1000;
+            padding: 20px 0;
+            border-bottom: 1px solid #444;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 45px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        .section {
+            padding: 110px 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            font-size: 3.2rem;
+            text-align: center;
+            margin-bottom: 70px;
+            border-bottom: 3px solid var(--white);
+            padding-bottom: 25px;
+            display: inline-block;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 25px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+            border: 3px solid var(--white);
+            transition: all 0.4s;
+            cursor: pointer;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(255,255,255,0.3);
+        }
+
+        .videos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 35px;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border: 3px solid var(--white);
+        }
+
+        .video-container video {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 16px 45px;
+            background: transparent;
+            color: var(--white);
+            border: 3px solid var(--white);
+            font-size: 1.35rem;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+
+        .btn:hover {
+            background: var(--white);
+            color: var(--black);
+        }
+
+        footer {
+            background: rgba(10,10,10,0.95);
+            text-align: center;
+            padding: 70px 20px 50px;
+            border-top: 1px solid #444;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#fotos">Fotos</a></li>
+            <li><a href="#videos">Videos</a></li>
+            <li><a href="#kontakt">Kontakt</a></li>
+            <li><a href="#studio">Das Studio</a></li>
+            <li><a href="#simulator">MMA Simulator</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <div>
+            <div class="logo-header">
+                <img src="./logo.jpeg" alt="AK Loewen Logo">
+            </div>
+            <p class="subtitle">KAMPFSPORTSTUDIO SOLINGEN</p>
+        </div>
+    </header>
+
+    <section id="fotos" class="section">
+        <h2>Fotos</h2>
+        <div class="gallery" id="imageGallery"></div>
+    </section>
+
+    <section id="videos" class="section" style="background: rgba(0,0,0,0.85);">
+        <h2>Videos</h2>
+        <div class="videos">
+            <div class="video-container">
+                <video controls><source src="./video1.mp4" type="video/mp4"></video>
+            </div>
+            <div class="video-container">
+                <video controls><source src="./video2.mp4" type="video/mp4"></video>
+            </div>
+            <div class="video-container">
+                <video controls><source src="./video3.mp4" type="video/mp4"></video>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontakt" class="section" style="background: rgba(0,0,0,0.85);">
+        <h2>Kontakt</h2>
+        <div style="text-align:center; font-size:1.45rem; line-height:1.8;">
+            <p><strong>AK Loewen Kampfsportstudio</strong></p>
+            <p>Werwolf 8 • 42651 Solingen</p>
+            <p>Telefon: 01573 0447730</p>
+            <p>E-Mail: info@akloewen.de</p>
+            <br>
+            <p>Trainingszeiten nach Vereinbarung</p>
+        </div>
+    </section>
+
+    <section id="studio" class="section">
+        <h2>Willkommen bei AK Loewen</h2>
+        <p style="font-size: 1.4rem; max-width: 900px; margin: 0 auto 40px; text-align: center;">
+            Dein Kampfsportstudio in Solingen.<br>
+            Disziplin • Respekt • Kampfgeist.
+        </p>
+        <a href="2page.html" class="btn">Trainingszeiten ansehen</a>
+    </section>
+
+    <!-- MMA Simulator -->
+    <section id="simulator" class="section" style="background: rgba(0,0,0,0.85);">
+        <h2>MMA Simulator</h2>
+        <p style="font-size: 1.3rem; max-width: 800px; margin: 0 auto 40px;">
+            Teste deine Fähigkeiten im Octagon!
+        </p>
+        <a href="3page.html" class="btn">🥊 Zum MMA Simulator</a>
+    </section>
+
+    <footer>
+        <p>© 2026 AK Loewen Kampfsportstudio Solingen</p>
+        <div style="margin-top:15px; opacity:0.7;">
+            Diese Seite wurde gemacht von Schmelzer • 2026
+        </div>
+    </footer>
+
+    <script>
+        // Automatische Foto-Galerie
+        const images = [
+            "team.jpeg",
+            "WhatsApp Image 2026-05-18 at 16.01.47.jpeg",
+            "WhatsApp Image 2026-05-18 at 16.04.23.jpeg",
+            "WhatsApp Image 2026-05-18 at 16.36.55.jpeg",
+            "WhatsApp Image 2026-05-28 at 15.34.21.jpeg",
+            "WhatsApp Image 2026-05-28 at 15.34.29.jpeg",
+            "WhatsApp Image 2026-05-28 at 15.34.40.jpeg",
+            "WhatsApp Image 2026-05-28 at 15.34.55.jpeg",
+            "WhatsApp Image 2026-05-28 at 15.35.01.jpeg",
+            "WhatsApp Image 2026-05-28 at 15.35.07.jpeg",
+            "WhatsApp Image 2026-05-28 at 15.35.23.jpeg",
+            "WhatsApp Image 2026-05-28 at 15.35.30.jpeg",
+            "WhatsApp Image 2026-05-28 at 15.35.45.jpeg",
+            "WhatsApp Image 2026-05-28 at 15.36.12.jpeg",
+            "WhatsApp Image 2026-05-28 at 15.36.22.jpeg",
+            "WhatsApp Image 2026-05-28 at 15.36.33.jpeg",
+            "WhatsApp Image 2026-05-28 at 15.36.43.jpeg",
+            "WhatsApp Image 2026-05-28 at 15.36.54.jpeg",
+            "WhatsApp Image 2026-05-28 at 15.37.07.jpeg"
+        ];
+
+        function loadImages() {
+            const gallery = document.getElementById('imageGallery');
+            gallery.innerHTML = '';
+            images.forEach(name => {
+                const img = document.createElement('img');
+                img.src = `./image/${name}`;
+                img.alt = name;
+                img.onclick = () => openLightbox(img);
+                gallery.appendChild(img);
+            });
+        }
+
+        function openLightbox(img) {
+            let lb = document.getElementById('lightbox');
+            if (!lb) {
+                lb = document.createElement('div');
+                lb.id = 'lightbox';
+                lb.style.cssText = 'display:none;position:fixed;z-index:2000;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.95);align-items:center;justify-content:center;';
+                lb.innerHTML = `<span onclick="this.parentElement.style.display='none'" style="position:absolute;top:30px;right:40px;font-size:50px;color:white;cursor:pointer;">×</span>
+                                <img id="lbimg" style="max-width:90%;max-height:90%;border:5px solid white;border-radius:8px;">`;
+                document.body.appendChild(lb);
+            }
+            document.getElementById('lbimg').src = img.src;
+            lb.style.display = 'flex';
+        }
+
+        window.onload = loadImages;
+    </script>
+</body>
+</html>
